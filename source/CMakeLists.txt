@@ -22,6 +22,12 @@ if(WIN32)
 	set_property(TARGET dsp56kHxD PROPERTY FOLDER "dsp56300")
 endif()
 
+option(SFZ_SAMPLER "Build SFZ v2 sampler" ON)
+
+if(SFZ_SAMPLER)
+	add_subdirectory(sfzSampler)
+endif()
+
 if(DSP56300_DEBUGGER)
 	set(wxUSE_LIBJPEG OFF)
 	set(wxUSE_LIBTIFF OFF)
