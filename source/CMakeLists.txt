@@ -28,6 +28,9 @@ if(SFZ_SAMPLER)
 	add_subdirectory(sfzSampler)
 endif()
 
+add_subdirectory(dsp56kSampler)
+set_property(TARGET dsp56kSampler PROPERTY FOLDER "dsp56300")
+
 if(DSP56300_DEBUGGER)
 	set(wxUSE_LIBJPEG OFF)
 	set(wxUSE_LIBTIFF OFF)
